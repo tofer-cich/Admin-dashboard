@@ -79,12 +79,11 @@ ul {
     background-color: white;
     grid-row: 1 / 3;
     display: grid;
-    grid-template: 1fr 1fr / repeat(3, 1fr);
+    grid-template: 1fr 1fr / 2fr 1fr;
     padding-right: 3rem;
 }
 
 div[role="search"] {
-    grid-column: span 2;
     padding-left: 2rem;
     align-self: center;
 }
@@ -117,6 +116,35 @@ input[type="search"] {
 #account-bar img[src="./photos/face-man-profile.svg"] {
     width: 2rem;
     height: 2rem;
+}
+
+#greeting {
+    grid-column: span 2;
+    padding-left: 2rem;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 2fr;
+    width: min-content;
+    height: max-content;
+    text-wrap: nowrap;
+}
+
+#greeting img[src="./photos/face-man-profile.svg"] {
+    width: 6rem;
+    height: 6rem;
+    grid-row: span 2;
+}
+
+#greeting p {
+    font-size: 13px;
+    align-self: end;
+    margin: 0;
+    padding: 5px 0;
+}
+
+#greeting .handle {
+    font-size: 1.6rem;
+    font-weight: bold;
+    align-self: start;
 }
 
 #main-content {
