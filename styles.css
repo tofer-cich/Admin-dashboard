@@ -21,6 +21,9 @@ body {
     grid-template-rows: 1fr 10fr;
     min-width: min-content;
     text-wrap: nowrap;
+    position: relative;
+    box-shadow: 1px 0 1px rgba(0, 0, 0, .1);
+    z-index: 1;
 }
 
 #sidebar ul {
@@ -81,6 +84,8 @@ ul {
     display: grid;
     grid-template: 1fr 1fr / 2fr 1fr;
     padding-right: 3rem;
+    position: relative;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
 }
 
 div[role="search"] {
@@ -107,7 +112,6 @@ input[type="search"] {
 }
 
 #account-bar {
-    align-self: center;
     justify-self: right;
     height: 3rem;
     align-content: center;
@@ -121,6 +125,7 @@ input[type="search"] {
 #greeting {
     grid-column: span 2;
     padding-left: 2rem;
+    grid-area: 2 / 1 / 3 / 2;
     display: grid;
     grid-template: 1fr 1fr / 1fr 2fr;
     width: min-content;
@@ -145,10 +150,84 @@ input[type="search"] {
     font-size: 1.6rem;
     font-weight: bold;
     align-self: start;
+    justify-self: right;
+}
+
+#feed-buttons {
+
+    grid-area: 2 / 2 / 3 / 3;
+    align-self: center;
+    justify-self: right;
+}
+
+#feed-buttons input[type="button"] {
+    margin-left: 1rem;
+    border: 1px solid #a855f7;
+    background-color: #a855f7;
+    color: white;
+    border-radius: 15px;
+    width: 4.7rem;
+    height: 2.1rem;
+    font-weight: 600;
 }
 
 #main-content {
     background-color: rgb(216, 216, 216);
+    grid-area: 3 / 2 / 4 / 3;
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 1fr;
+}
+
+#projects {
+    display: grid;
+    grid-template: repeat(3, min-content) / repeat(2, min-content);
+    gap: 1.5rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    grid-area: 1 / 1 / span 2 / span 1;
+}
+
+.main-content-header {
+    grid-column: span 2;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card {
+    width: 20rem;
+    height: 11rem;
+    border-radius: 5px;
+    background: linear-gradient(to left, white 97.5%, #7dd3fc 97.5%);
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+.card p {
+    margin: 0 0 0 1.5rem;
+    font-size: .95rem;
+    align-self: start;
+}
+
+.card .project-header {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.card-icons {
+    justify-self: right;
+    position: relative;
+}
+
+.card > div {
+    grid-row-start: 1 / 2;
+}
+
+.card-icons img {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 1.5rem;
 }
 
 h1 {
