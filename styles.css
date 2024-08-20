@@ -8,7 +8,7 @@ body {
 
 #container {
     height: 100vh;
-    width: 60vw;
+    width: 70vw;
     display: grid;
     grid-template: 1fr 1fr 10fr / 1fr 3.5fr;
 }
@@ -185,6 +185,7 @@ input[type="search"] {
     margin-left: 1rem;
     margin-top: 1rem;
     grid-area: 1 / 1 / span 2 / span 1;
+    width: min-content;
 }
 
 .main-content-header {
@@ -201,6 +202,7 @@ input[type="search"] {
     background: linear-gradient(to left, white 97.5%, #7dd3fc 97.5%);
     display: grid;
     grid-template-rows: 3fr 1fr;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .card p {
@@ -228,6 +230,26 @@ input[type="search"] {
     width: 1.4rem;
     height: 1.4rem;
     margin-right: 1.5rem;
+}
+
+#announcements {
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 13fr;   
+}
+
+.announcement-card-container {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.announcement-card-container .announcement-card-header {
+    font-size: .95rem;
+}
+
+.announcement-card-container p {
+    font-size: .75rem;
 }
 
 h1 {
